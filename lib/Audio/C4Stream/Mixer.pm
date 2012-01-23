@@ -148,12 +148,13 @@ Audio::C4Stream::Mixer - Perl extension for crossfade mixer.
 =head1 SYNOPSIS
 
   use Audio::C4Stream::Mixer;
+  
   my $mixer = new Audio::C4Stream::Mixer(duration => 1, silentOut => 0.8, silentIn => 0);
   $mixer->switch();
 
 =head1 DESCRIPTION
 
-This library can make croosfades.
+This library can make crossfades.
 Use it only with 16bits stereo, 44100hz sounds.
 
 =head2 Constructor
@@ -161,17 +162,36 @@ Use it only with 16bits stereo, 44100hz sounds.
 Parameters are :
 
 =over 3
-=item C<duration> Crossfade time
-=item C<silentOut> Silence time at the end
-=item C<silentIn>  Silence time at the beginning
+
+=item C<duration> 
+
+Crossfade time
+
+=item C<silentOut> 
+
+Silence time at the end
+
+=item C<silentIn>  
+
+Silence time at the beginning
+
+=back
 
 =head2 Fonctions
 
 The functions are :
 
 =over 2
-=item C<mixPcmFrames> accumulate the audio data
-=item C<switch> change the deck (only two : A or B)
+
+=item C<mixPcmFrames> 
+
+Accumulate the audio data
+
+=item C<switch> 
+
+Change the deck (only two : A or B)
+
+=back
 
 =head2 EXPORT
 
@@ -183,11 +203,11 @@ See L<Audio::C4Stream::Wav>
 
 =head1 AUTHOR
 
-C4PC, L<adeamara@cloud4pc.com>
+cloud4pc, L<adeamara@cloud4pc.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2012 by C4PC
+Copyright (C) 2012 by cloud4pc
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.10.1 or,
